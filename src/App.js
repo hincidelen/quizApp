@@ -7,7 +7,8 @@ export default class App extends Component {
         super(props);
         this.state = {
             term: '',
-            items: []
+            items: [],
+            id:''
         };
     }
 
@@ -21,16 +22,29 @@ export default class App extends Component {
             term: '',
             items: [...this.state.items, this.state.term]
         });
+
     }
 
+     handleDelete (index){
+
+         let filteredArray = this.state.items
+         filteredArray.splice(index, 1);
+
+         this.setState({
+             items: filteredArray
+
+         })
+
+    }
     render() {
+
         return (
             <div>
                 <form className="App" onSubmit={this.onSubmit}>
                     <input value={this.state.term} onChange={this.onChange} />
                     <button>Submit</button>
                 </form>
-                <List items={this.state.items} />
+                <List items={this.state.items}  handleDelete={this.handleDelete.bind(this)}/>
             </div>
         );
     }
