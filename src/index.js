@@ -9,8 +9,8 @@ function Welcome(props) {
 }
 const element = <Welcome name="sarah"/>
 ReactDOM.render(
-    element,
-    //<App />,
+
+    <App />,
     document.getElementById('root')
 );
 registerServiceWorker();
