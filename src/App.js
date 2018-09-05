@@ -32,9 +32,7 @@ export default class App extends Component {
 
          this.setState({
              items: filteredArray
-
          })
-
     }
     render() {
 
