@@ -10,8 +10,8 @@ export default class Question extends Component {
 
     render() {
         return(
-        <ul>
-            <h5>       {this.props.question}</h5>
+        <ul >
+            <h5 style={{justifyContent: 'space-evenly',textAlign: 'center'}}>       {this.props.question}</h5>
 
         </ul>
         );

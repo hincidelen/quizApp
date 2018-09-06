@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Question from "./Question";
 import ChoiceList from "./ChoiceList";
 import Score from "./Score";
-import Choice from "./Choice";
-
+import Modal from 'react-bootstrap/lib/Modal';
+import Button from 'react-bootstrap/lib/Button';
 export default class Main extends Component {
     constructor(props) {
         super(props);
@@ -91,14 +91,20 @@ export default class Main extends Component {
         let {data} = this.state;
         return (
             <div style={{ height: 10 }}>
+                <Modal.Header style={{justifyContent: 'space-evenly'}}>
                 <Score score={this.state.score} record={this.state.record} next={this.componentDidMount.bind(this)}/>
-                <Question style={{display: 'flex', justifyContent: 'center'}} type= {data.results[0].type } question= {data.results[0].question }/>
+                </Modal.Header>
+                <Modal.Body style={{justifyContent: 'space-evenly'}}>
+                <Question  type= {data.results[0].type } question= {data.results[0].question }/>
 
-                <ChoiceList isClicked={this.state.isClicked} choices={this.state.choices} chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
-                <div >
-                    <button onClick={() => this.reset()}>Reset</button>
-                    <button  onClick={() => this.fetchData()}>Next</button>
-                </div>
+                <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices} chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
+                </Modal.Body>
+                <Modal.Footer style={{justifyContent: 'center'}}>
+                        <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
+                        <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
+
+                </Modal.Footer>
+
             </div>
         );
     }

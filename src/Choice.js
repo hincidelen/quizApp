@@ -5,9 +5,7 @@ export default class Choice extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            choice:null,
             ind: -1,
-            list:null,
             appearances : {
                 default: 'default',
                 true: 'success',
@@ -23,8 +21,7 @@ export default class Choice extends Component {
         })
         {
             this.setState({
-                ind:index,
-                choice:choice
+                ind:index
             })
             this.props.callbackFromParent(choice);
         }
@@ -34,14 +31,16 @@ export default class Choice extends Component {
     render() {
 
         let sh = this.props.items || [];
-        console.log(this.props.isClicked);
-        return <div>
+        return <div style={{justifyContent: 'space-evenly',textAlign: 'center'}}>
             {
 
                 sh.map((item, index) => {
-                    return  <Button  bsStyle={this.props.isClicked?(item==this.props.correct? this.state.appearances.true : (this.state.ind==index?this.state.appearances.false:this.state.appearances.default)):this.state.appearances.default}  key={index} onClick={() => this.evaluate(index,item)}  >
-                        {item}, {this.props.isClicked}
-                    </Button>
+                    return  <li type="A"><Button  bsStyle={this.props.isClicked?
+                        (item==this.props.correct? this.state.appearances.true :
+                            (this.state.ind==index?this.state.appearances.false:this.state.appearances.default)):
+                        this.state.appearances.default}  key={index} onClick={() => this.evaluate(index,item)}  >
+                        {item}
+                    </Button></li>
                 })
 
             }

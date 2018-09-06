@@ -12,10 +12,10 @@ export default class ChoiceList extends Component {
     render() {
         let list = this.props.choices||[];
         return(
-            <ul>
-
-                <Choice isClicked={this.props.isClicked}  correct={this.props.answer} callbackFromParent={this.props.chooseAnswer} items= {this.props.choices }/>
-
+            <ul style={{justifyContent: 'center'}}>
+                <Choice isClicked={this.props.isClicked}
+                        correct={this.props.answer} callbackFromParent={this.props.chooseAnswer}
+                        items= {this.props.choices }/>
             </ul>
 
         );
