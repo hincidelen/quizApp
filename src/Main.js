@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import Question from "./Question";
 import ChoiceList from "./ChoiceList";
 import Score from "./Score";
+import Login from "./Login";
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
 import { connect } from 'react-redux';
@@ -18,7 +20,8 @@ class Main extends Component {
             choices:null,
             isClicked:true,
             score:0,
-            record:0
+            record:0,
+            userName:"",
         };
     }
 
@@ -54,11 +57,11 @@ class Main extends Component {
     chooseAnswer(dataFromChild) {
         if(!this.state.isClicked){
             this.setState({ choice: dataFromChild, isClicked:true });
-            if(dataFromChild==this.state.data.results[0].correct_answer)
+            if(dataFromChild===this.state.data.results[0].correct_answer)
                 this.correct();
             else
                 this.incorrect();
-        }
+        }//this.props.load();
     }
 
     correct() {
@@ -88,25 +91,29 @@ class Main extends Component {
             }
         return arr;
     };
-
+    setName(name){
+        this.setState({
+            userName:name,
+        })
+    }
     render() {
         let {data} = this.state;
         return (
             <div style={{ height: 10 }}>
-                <Modal.Header style={{justifyContent: 'space-evenly'}}>
-                <Score record={this.state.record} next={this.componentDidMount.bind(this)}/>
-                </Modal.Header>
-                <Modal.Body style={{justifyContent: 'space-evenly'}}>
-                <Question  type= {data.results[0].type } question= {data.results[0].question }/>
+                    <p>Name:{this.state.userName}</p>
+                    <Modal.Header style={{justifyContent: 'space-evenly'}}>
+                        <Score record={this.state.record} next={this.componentDidMount.bind(this)}/>
+                    </Modal.Header>
+                    <Modal.Body style={{justifyContent: 'space-evenly'}}>
+                    <Question  type= {data.results[0].type } question= {data.results[0].question }/>
 
-                <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices} chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
-                </Modal.Body>
-                <Modal.Footer style={{justifyContent: 'center'}}>
-                        <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
-                        <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
-
-                </Modal.Footer>
-
+                    <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices} chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
+                    </Modal.Body>
+                    <Modal.Footer  style={{justifyContent: 'center'}}>
+                            <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
+                            <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
+                    </Modal.Footer>
+                <Login userName={this.state.userName} setName={this.setName.bind(this)} />
             </div>
         );
     }
@@ -119,8 +126,10 @@ const mapDispatchToProps = {
     update_record: (obj) => recordActions.updateRecord(obj),
     resetRecord: (obj) => recordActions.resetRecord(obj),
 };
+
 const mapStateToProps = (state) => ({
     score: state.score || {},
     record: state.record || {},
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
