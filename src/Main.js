@@ -4,7 +4,12 @@ import ChoiceList from "./ChoiceList";
 import Score from "./Score";
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
-export default class Main extends Component {
+import { connect } from 'react-redux';
+import * as scoreActions from './store/actions/scoreActions';
+import * as recordActions from './store/actions/recordActions';
+import recordReducer from "./store/reducers/recordReducer";
+
+class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,10 +23,12 @@ export default class Main extends Component {
     }
 
     reset(){
-        this.setState({
+        this.props.resetScore();
+        this.props.resetRecord();
+        /*this.setState({
             score:0,
             record:0
-        })
+        })*/
         this.fetchData();
     }
 
@@ -39,6 +46,7 @@ export default class Main extends Component {
                     let choices= [...this.state.data.results[0].incorrect_answers, this.state.data.results[0].correct_answer];
                     let sh=this.shuffle(choices);
                     this.setState({ choice:null,choices:sh,isClicked:false});
+                    console.log(this.state.data.results[0].correct_answer)
                 });
         }
     }
@@ -53,25 +61,19 @@ export default class Main extends Component {
         }
     }
 
-    correct(){
-        let score=this.state.score;
-        let record=this.state.record;
-        score=score+1;
-        this.setState({
-            score:score
-        })
-        if(score>record)
-            this.setState({
-                record:score
-            })
+    correct() {
+        // let record=this.state.record;
+
+        let {score, record} = this.props;
+        this.props.increaseScore();
+        if(score.point+1>record.record)
+            this.props.update_record(score.point+1);
+
     }
 
     incorrect(){
-        let temp=this.state.score;
-        temp=0;
-        this.setState({
-            score:temp
-        })
+        //this.props.dispatch({type:"decrease"});
+        this.props.resetScore();
     }
 
     shuffle(arr) {
@@ -92,7 +94,7 @@ export default class Main extends Component {
         return (
             <div style={{ height: 10 }}>
                 <Modal.Header style={{justifyContent: 'space-evenly'}}>
-                <Score score={this.state.score} record={this.state.record} next={this.componentDidMount.bind(this)}/>
+                <Score record={this.state.record} next={this.componentDidMount.bind(this)}/>
                 </Modal.Header>
                 <Modal.Body style={{justifyContent: 'space-evenly'}}>
                 <Question  type= {data.results[0].type } question= {data.results[0].question }/>
@@ -109,3 +111,16 @@ export default class Main extends Component {
         );
     }
 }
+
+const mapDispatchToProps = {
+    increaseScore: (obj) => scoreActions.increaseScore(obj),
+    //decreaseScore: (obj) => scoreActions.decreaseScore(obj),
+    resetScore: (obj) => scoreActions.resetScore(obj),
+    update_record: (obj) => recordActions.updateRecord(obj),
+    resetRecord: (obj) => recordActions.resetRecord(obj),
+};
+const mapStateToProps = (state) => ({
+    score: state.score || {},
+    record: state.record || {},
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
