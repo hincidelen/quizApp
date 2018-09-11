@@ -1,12 +1,16 @@
-const userRecordReducer = (state = {userName:"", record: 0}, action) => {
+const userRecordReducer = (state = {list:[]}, action) => {
   switch (action.type) {
 
-    case "newUser":
-      return {userName:action.userName , record: 0 };
-    case "update_record":
-      return {record: action.point };
-    case "resetRecord":
-      return {record: 0};
+    case "createNewUser":
+        var user=action.user;
+        return {list:[...state.list, user]};
+    case "updateUserRecord":
+        let temp=state.list;
+        temp[action.key].record=action.record;
+        console.log(temp);
+      return {list:temp };
+      case "resetRecord":
+      return {...state, record: 0};
       default:
       return {...state};
   }

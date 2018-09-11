@@ -8,10 +8,11 @@ class Score extends Component {
     }
 
     render() {
-        let {record, score} = this.props;
+        let user = this.props.users.list[this.props.userKey]||[];
+        let record= user.record||0;
         return(
             <ul>
-                <h6> rekor:{record.record} puan:{score.point} </h6>
+                <h6> rekor:{record} puan:{this.props.point} </h6>
             </ul>
 
         );
@@ -21,6 +22,7 @@ class Score extends Component {
 const mapStateToProps = (state) => ({
     score: state.score || {},
     record: state.record || {},
+    users: state.users || {},
 });
 
 

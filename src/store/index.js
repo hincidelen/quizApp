@@ -10,7 +10,7 @@ const createStoreWithMiddleware
 
 const configureStore = () => {//initialState = {}
     const store = createStoreWithMiddleware(reducers, load(), //initialState,
-          window.__REDUX_DEVTOOLS_EXTENSION_applyMiddleware_ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
 
     return store;
