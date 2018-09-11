@@ -49,9 +49,17 @@ class Main extends Component {
     }
 
     componentDidMount() {
-    /*this.setState({
-        userName:""
-    });*/
+
+        console.log(this.props.location.query)
+        console.log(this.props.location.search)
+        console.log(this.props.match.params.id)
+
+        console.log(this.props)
+        var name = (this.props.location.search).slice(1);
+        console.log(name)
+        if(name=="")
+            this.props.history.push('/');
+        this.setName(name);
         this.fetchData().then(() => {
         });
     }
@@ -144,18 +152,21 @@ correct() {
                 record:index.record
             });
         }
+
     }
 
     render() {
         let {data} = this.state;
         //let record = this.props.users.list[this.state.key].record||0
+        //<Login userName={this.state.userName} setName={this.setName.bind(this)} />
+        let link = '/recordList?'.concat(this.state.userName)
         return (
             <div style={{ height: 10 }}>
-                <Login userName={this.state.userName} setName={this.setName.bind(this)} />
+
                 <p>{this.state.userName} : {this.state.key}</p>
                 <Modal.Header style={{justifyContent: 'space-evenly'}}>
 
-                        <Score userKey={this.state.key} point={this.state.score} next={this.componentDidMount.bind(this)}/>
+                        <Score userKey={this.state.key} point={this.state.score} next={this.fetchData.bind(this)}/>
                     </Modal.Header>
                 <Modal.Body style={{justifyContent: 'space-evenly'}}>
                         <Question  type= {data.results[0].type } question= {data.results[0].question }/>
@@ -167,7 +178,8 @@ correct() {
                         <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
 
                 </Modal.Footer>
-                <Link to="/recordList"><h5>Record List</h5></Link>
+                <Link to= {link}><h5>Record List</h5></Link>
+                <Link to= "/"><h5>Log out</h5></Link>
             </div>
         );
     }

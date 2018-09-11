@@ -12,9 +12,17 @@
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
 import * as React from "react";
+import {
+    withRouter,
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    Redirect
+} from 'react-router-dom'
+//import withRouter from "react-router-dom";
 
-
-export default class Login extends React.Component {
+class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -28,21 +36,25 @@ export default class Login extends React.Component {
         this.setState({name: event.target.value});
     }
 
-    handleSubmit(event) {
-        this.props.setName(this.state.name);
+    handleSubmit(e) {
+        e.preventDefault();
+        //this.props.setName(this.state.name);
+        this.props.history.push('/main?'+this.state.name);
     }
+    //event.preventDefault();
     render() {
-        return (
+        return (//show={this.props.userName==""?true:false}
             <div>
-                <Modal animation={false} show={this.props.userName==""?true:false}>
+                <Modal animation={false} show={true}>
                     <Modal.Header>
                         <Modal.Title>Kullanıcı adı giriniz</Modal.Title>
                     </Modal.Header>
                     <Modal.Body style={{justifyContent: 'space-evenly'}}>
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit.bind(this)}>
                             <label>
                                 <input type="text" value={this.state.name} onChange={this.handleChange} />
                             </label>
+
                             <input type="submit" value="Giriş" />
                         </form>
                     </Modal.Body>
@@ -51,3 +63,4 @@ export default class Login extends React.Component {
         );
     }
 }
+export default withRouter(Login);

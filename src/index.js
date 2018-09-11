@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Login from './Login';
 import Main from './Main';
 import RecordList from './RecordList';
 import registerServiceWorker from './registerServiceWorker';
@@ -13,7 +14,8 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
-            <Route exact path="/" component={Main} deneme="dsadad" />
+            <Route exact path="/" component={Login} deneme="dsadad" />
+            <Route path="/main" component={Main} deneme="dsadad" />
             <Route path="/recordList" component={RecordList}/>
             </div>
         </BrowserRouter>

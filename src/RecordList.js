@@ -20,24 +20,24 @@ const recordList = () => {
 export default recordList;*/
 
 class RecordList extends Component {
+
     constructor(props) {
         super(props);
-    }
-    asd(){
-        //browserHistory.push('/')
     }
 
     render() {
         var list=this.props.users.list||[];
         var size = 10;
         var ordered = (_.orderBy(list, ['record', 'key'], ['desc', 'asc']));
+        let name = (this.props.location.search).slice(1);
+        let link =  "/main?".concat(name);
         return (
             <div style={{ height: 10, justifyContent: 'center'}}>
                 <center><h2>Record List</h2></center>
                 {ordered.slice(0,10).map(function(d, idx){
                     return (<ul  key={idx}> <center>{d.record} - {d.userName} </center></ul>)
                 })}
-                <Link to="/"><h5>back</h5></Link>
+                <Link to={link}><h5>back</h5></Link>
             </div>
         );
     }
