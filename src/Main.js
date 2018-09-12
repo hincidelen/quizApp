@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 import Question from "./Question";
 import ChoiceList from "./ChoiceList";
 import Score from "./Score";
-import Login from "./Login";
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
 
 import { connect } from 'react-redux';
-import * as scoreActions from './store/actions/scoreActions';
 import * as recordActions from './store/actions/recordActions';
 import * as userRecordActions from './store/actions/userRecordActions';
-import recordList from './RecordList';
 import {
     BrowserRouter as Router,
     Route,
@@ -39,38 +36,29 @@ class Main extends Component {
     }
 
     reset(){
-        //this.props.resetScore();
-        //this.props.resetRecord();
         this.setState({
             score:0
         })
-        //this.props.updateUserRecord({key:this.state.key,record:-1});
         this.fetchData();
     }
 
     componentDidMount() {
-
-        console.log(this.props.location.query)
-        console.log(this.props.location.search)
-        console.log(this.props.match.params.id)
-
-        console.log(this.props)
         var name = (this.props.location.search).slice(1);
-        console.log(name)
         if(name=="")
             this.props.history.push('/');
         this.setName(name);
         this.fetchData().then(() => {
         });
     }
-
      fetchData() {
         if(this.state.isClicked){
             return fetch('https://opentdb.com/api.php?amount=1')
                 .then(response => response.json())
                 .then(newData => {
                     this.setState({ data: newData});
-                    let choices= [...this.state.data.results[0].incorrect_answers, this.state.data.results[0].correct_answer];
+                    let incorrects = this.state.data.results[0].incorrect_answers||[];
+                    let correct = this.state.data.results[0].correct_answer||"";
+                    let choices= [...incorrects, correct];
                     let sh=this.shuffle(choices);
                     this.setState({ choice:null,choices:sh,isClicked:false});
                     console.log(this.state.data.results[0].correct_answer)
@@ -88,37 +76,22 @@ class Main extends Component {
         }//this.props.load();
     }
 
-    // let record=this.state.record;
-correct() {
+    correct() {
         if(this.state.score+1>this.props.users.list[this.state.key].record){
             /*this.setState({
                 record:this.state.score+1
             })*/
             this.props.updateUserRecord({key:this.state.key,record:this.state.score+1});
         }
-    this.setState({
-        score:this.state.score+1
-    })
-
-
-/*
-
-        let {score, record} = this.props;
-        this.props.increaseScore();
-        if(score.point+1>record.record) {
-            this.props.update_record(score.point + 1);
-        }*/
-        //console.log(this.props.userList);
-
+        this.setState({
+            score:this.state.score+1
+        })
     }
 
     incorrect(){
-        //this.props.dispatch({type:"decrease"});
-        //this.props.resetScore();
         this.setState({
             score:0,
         })
-        //this.props.updateUserRecord({key:this.state.key,record:this.state.record});
     }
 
     shuffle(arr) {
@@ -133,9 +106,7 @@ correct() {
             }
         return arr;
     };
-
     setName(name){
-        //console.log(this.props.users.list)
         if(name!=""){
             let index=_.find(this.props.users.list, { 'userName': name});
             console.log("iii",index,name,this.state.list);
@@ -152,13 +123,9 @@ correct() {
                 record:index.record
             });
         }
-
     }
-
     render() {
         let {data} = this.state;
-        //let record = this.props.users.list[this.state.key].record||0
-        //<Login userName={this.state.userName} setName={this.setName.bind(this)} />
         let link = '/recordList?'.concat(this.state.userName)
         return (
             <div style={{ height: 10 }}>
@@ -170,13 +137,12 @@ correct() {
                     </Modal.Header>
                 <Modal.Body style={{justifyContent: 'space-evenly'}}>
                         <Question  type= {data.results[0].type } question= {data.results[0].question }/>
-
-                        <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices} chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
+                        <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices}
+                                     chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
                     </Modal.Body>
                 <Modal.Footer  style={{justifyContent: 'center'}}>
                         <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
                         <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
-
                 </Modal.Footer>
                 <Link to= {link}><h5>Record List</h5></Link>
                 <Link to= "/"><h5>Log out</h5></Link>
@@ -186,12 +152,11 @@ correct() {
 }
 
 const mapDispatchToProps = {
-    increaseScore: (obj) => scoreActions.increaseScore(obj),
-    resetScore: (obj) => scoreActions.resetScore(obj),
     update_record: (obj) => recordActions.updateRecord(obj),
     resetRecord: (obj) => recordActions.resetRecord(obj),
     updateUserRecord: (obj) => userRecordActions.updateUserRecord(obj),
     createNewUser: (obj) => userRecordActions.createNewUser(obj),
+    resetUsers: (obj) => userRecordActions.resetUsers(obj),
 
 };
 

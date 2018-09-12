@@ -14,13 +14,7 @@ import Button from 'react-bootstrap/lib/Button';
 import * as React from "react";
 import {
     withRouter,
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect
 } from 'react-router-dom'
-//import withRouter from "react-router-dom";
 
 class Login extends React.Component {
     constructor(props, context) {
@@ -41,7 +35,6 @@ class Login extends React.Component {
         //this.props.setName(this.state.name);
         this.props.history.push('/main?'+this.state.name);
     }
-    //event.preventDefault();
     render() {
         return (//show={this.props.userName==""?true:false}
             <div>
@@ -54,7 +47,6 @@ class Login extends React.Component {
                             <label>
                                 <input type="text" value={this.state.name} onChange={this.handleChange} />
                             </label>
-
                             <input type="submit" value="Giriş" />
                         </form>
                     </Modal.Body>
