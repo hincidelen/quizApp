@@ -1,0 +1,12 @@
+{"response_code":0,
+  "results":[
+    {"category":"Science & Nature","type":"boolean","difficulty":"medium","question":"The Neanderthals were a direct ancestor of modern humans.","correct_answer":"False","incorrect_answers":["True"]},
+    {"category":"Sports","type":"multiple","difficulty":"easy","question":"In golf, what name is given to a hole score of two under par?","correct_answer":"Eagle","incorrect_answers":["Birdie","Bogey","Albatross"]},
+    {"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What is the most common surname Wales?","correct_answer":"Jones","incorrect_answers":["Williams","Davies","Evans"]},
+    {"category":"Entertainment: Video Games","type":"multiple","difficulty":"easy","question":"In &quot;Undertale&quot;, how many main endings are there?","correct_answer":"3","incorrect_answers":["2","5","13"]},
+    {"category":"Entertainment: Video Games","type":"multiple","difficulty":"easy","question":"Which of these is NOT a main playable character in &quot;Grand Theft Auto V&quot;?","correct_answer":"Lamar","incorrect_answers":["Trevor","Michael","Franklin"]},
+    {"category":"Animals","type":"boolean","difficulty":"easy","question":"A flock of crows is known as a homicide.","correct_answer":"False","incorrect_answers":["True"]},
+    {"category":"Entertainment: Film","type":"multiple","difficulty":"medium","question":"Who voiced Metalbeard in &quot;The Lego Movie&quot;?","correct_answer":"Nick Offerman","incorrect_answers":["Liam Neeson","Morgan Freeman","Will Arnet"]},
+    {"category":"Entertainment: Japanese Anime & Manga","type":"multiple","difficulty":"medium","question":"What year did &quot;Attack on Titan&quot; Season 2 begin airing?","correct_answer":"2017","incorrect_answers":["2018","2019","2020"]},
+    {"category":"Politics","type":"multiple","difficulty":"medium","question":"Who was elected leader of the UK Labour Party in September 2015?","correct_answer":"Jeremy Corbyn","incorrect_answers":["Ed Miliband","David Cameron","Theresa May"]},
+    {"category":"Entertainment: Japanese Anime & Manga","type":"multiple","difficulty":"medium","question":"&quot;Silhouette&quot;, a song performed by the group &#039;KANA-BOON&#039; is featured as the sixteenth opening of which anime?","correct_answer":"Naruto: Shipp\u016bden","incorrect_answers":["One Piece","Naruto","Gurren Lagann"]}]}

@@ -28,10 +28,11 @@ class Main extends Component {
             isClicked:true,
             score:0,
             record:0,
-            key:0,
+            key:-1,
             userName:"",
             user:null,
-            list:[]
+            list:[],
+            questionNo:0,
         };
     }
 
@@ -43,25 +44,34 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        var name = (this.props.location.search).slice(1);
-        if(name=="")
-            this.props.history.push('/');
-        this.setName(name);
-        this.fetchData().then(() => {
-        });
+        let link = (this.props.location.search).slice(1);
+        let ss=link.split("&")||[];
+        let name=ss[0].slice(5);
+        let isadmin=(ss[1].slice(8)==='true');
+        console.log(name," ",isadmin,)
+        if(name==""){
+            console.log("dur")
+            this.props.history.push('/quizApp');
+        }
+        else{
+            this.setName(name,isadmin);
+            this.fetchData().then(() => {
+            });
+        }
     }
      fetchData() {
         if(this.state.isClicked){
-            return fetch('https://opentdb.com/api.php?amount=1')
+            return fetch('https://opentdb.com/api.php?amount=1')//('http://127.0.0.1:3002/quiz')//https://opentdb.com/api.php?amount=1
                 .then(response => response.json())
                 .then(newData => {
-                    this.setState({ data: newData});
-                    let incorrects = this.state.data.results[0].incorrect_answers||[];
-                    let correct = this.state.data.results[0].correct_answer||"";
+                    console.log(newData,newData.results.length);
+                    var questionNo = Math.floor(Math.random() * newData.results.length);
+                    this.setState({ data: newData, questionNo:questionNo});
+                    let incorrects = this.state.data.results[questionNo].incorrect_answers||[];
+                    let correct = this.state.data.results[questionNo].correct_answer||"";
                     let choices= [...incorrects, correct];
                     let sh=this.shuffle(choices);
                     this.setState({ choice:null,choices:sh,isClicked:false});
-                    console.log(this.state.data.results[0].correct_answer)
                 });
         }
     }
@@ -69,7 +79,7 @@ class Main extends Component {
     chooseAnswer(dataFromChild) {
         if(!this.state.isClicked){
             this.setState({ choice: dataFromChild, isClicked:true });
-            if(dataFromChild===this.state.data.results[0].correct_answer)
+            if(dataFromChild===this.state.data.results[this.state.questionNo].correct_answer)
                 this.correct();
             else
                 this.incorrect();
@@ -77,7 +87,8 @@ class Main extends Component {
     }
 
     correct() {
-        if(this.state.score+1>this.props.users.list[this.state.key].record){
+        let record=this.props.users.list[this.state.key]||{}
+        if(this.state.score+1>record.record){
             /*this.setState({
                 record:this.state.score+1
             })*/
@@ -106,19 +117,21 @@ class Main extends Component {
             }
         return arr;
     };
-    setName(name){
+    setName(name,isadmin){
         if(name!=""){
             let index=_.find(this.props.users.list, { 'userName': name});
+
             console.log("iii",index,name,this.state.list);
             if(!index){//newuser
 
-                let newUser = {userName:name, record:0, key:this.props.users.list.length};
+                let newUser = {userName:name, record:0, isadmin:isadmin};
                 let item=this.props.createNewUser(newUser);
                 index=newUser;
             }
+            var key = this.props.users.list.indexOf(index);
             this.setState({
                 list:this.props.users.list,
-                key:index.key,
+                key:key,
                 userName:index.userName,
                 record:index.record
             });
@@ -126,7 +139,8 @@ class Main extends Component {
     }
     render() {
         let {data} = this.state;
-        let link = '/recordList?'.concat(this.state.userName)
+        let results=data.results;
+        let link = 'recordList?'.concat(this.state.userName)
         return (
             <div style={{ height: 10 }}>
 
@@ -136,16 +150,16 @@ class Main extends Component {
                         <Score userKey={this.state.key} point={this.state.score} next={this.fetchData.bind(this)}/>
                     </Modal.Header>
                 <Modal.Body style={{justifyContent: 'space-evenly'}}>
-                        <Question  type= {data.results[0].type } question= {data.results[0].question }/>
+                        <Question  type= {results[this.state.questionNo].type } question= {results[this.state.questionNo].question }/>
                         <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices}
-                                     chooseAnswer={this.chooseAnswer.bind(this)} answer= {data.results[0].correct_answer } />
+                                     chooseAnswer={this.chooseAnswer.bind(this)} answer= {results[this.state.questionNo].correct_answer } />
                     </Modal.Body>
                 <Modal.Footer  style={{justifyContent: 'center'}}>
                         <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
                         <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
                 </Modal.Footer>
                 <Link to= {link}><h5>Record List</h5></Link>
-                <Link to= "/"><h5>Log out</h5></Link>
+                <Link to= "/quizApp"><h5>Log out</h5></Link>
             </div>
         );
     }
@@ -167,3 +181,12 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
+
+
+
+
+
+
+
+
+

@@ -14,5 +14,5 @@ export const resetUsers= (obj) => ({
 export const deleteUser= (obj) => ({
     type: "deleteUser",
     key:obj.key,
-    deleteKey:obj.deleteKey,
+    deleteUserName:obj.deleteKey,
 });

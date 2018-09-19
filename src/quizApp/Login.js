@@ -23,31 +23,46 @@ class Login extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            name:""
+            name:"",
+            admin:false
         };
     }
     handleChange(event) {
-        this.setState({name: event.target.value});
+        if(event.target.type === 'checkbox')
+            this.setState({admin:event.target.checked});
+        else
+            this.setState({name: event.target.value,});
     }
 
     handleSubmit(e) {
         e.preventDefault();
         //this.props.setName(this.state.name);
-        this.props.history.push('/main?'+this.state.name);
+        this.props.history.push('quizApp/main?name='+this.state.name+'&isadmin='+this.state.admin);
     }
     render() {
         return (//show={this.props.userName==""?true:false}
             <div>
                 <Modal animation={false} show={true}>
                     <Modal.Header>
-                        <Modal.Title>Kullanıcı adı giriniz</Modal.Title>
+                        <Modal.Title><center>Kullanıcı adı giriniz </center></Modal.Title>
                     </Modal.Header>
                     <Modal.Body style={{justifyContent: 'space-evenly'}}>
-                        <form onSubmit={this.handleSubmit.bind(this)}>
-                            <label>
+                        <form onSubmit={this.handleSubmit.bind(this)} style={{justifyContent: 'space-evenly'}}>
+                        <center>
+                            admin:
+                            <input
+                                align="right"
+                                name="isAdmin"
+                                type="checkbox"
+                                checked={this.state.admin}
+                                onChange={this.handleChange} />
+                            <br/>
+                            <label>name:
                                 <input type="text" value={this.state.name} onChange={this.handleChange} />
+
                             </label>
-                            <input type="submit" value="Giriş" />
+                            <br/>
+                            <input type="submit" value="Giriş" /></center>
                         </form>
                     </Modal.Body>
                 </Modal>

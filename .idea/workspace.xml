@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c26e09b-8932-4880-8b9b-43e9f7a23025" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ConfirmModal.js" afterDir="false" />
+    <list default="true" id="7c26e09b-8932-4880-8b9b-43e9f7a23025" name="Default Changelist" comment="all is OK admin handles deleteuser resetUsers at recordList">
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/denmee.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/mongoDB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeJSApp/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecordList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/userRecordActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/userRecordActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/userRecordReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userRecordReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkListApp/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkListApp/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkListApp/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Choice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Choice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChoiceList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/ChoiceList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConfirmModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/ConfirmModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkListApp/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecordList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/RecordList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Score.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/recordActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/actions/recordActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/scoreActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/actions/scoreActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/userRecordActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/actions/userRecordActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/recordReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/reducers/recordReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/scoreReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/reducers/scoreReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/userRecordReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/store/reducers/userRecordReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,38 +46,45 @@
     <session id="1895225919">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="7959" />
-          <entry key="json" value="2" />
-          <entry key="txt" value="152" />
+          <entry key="htm" value="4" />
+          <entry key="js" value="9533" />
+          <entry key="json" value="29" />
+          <entry key="txt" value="235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="7959" />
-          <entry key="PLAIN_TEXT" value="152" />
+          <entry key="HTML" value="4" />
+          <entry key="JSON" value="29" />
+          <entry key="JavaScript" value="9533" />
+          <entry key="PLAIN_TEXT" value="235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="js" value="46" />
+          <entry key="css" value="3" />
+          <entry key="js" value="81" />
+          <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="JavaScript" value="46" />
+          <entry key="CSS" value="3" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="81" />
         </counts>
       </usages-collector>
     </session>
@@ -65,37 +95,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/recordActions.js">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/store/reducers/userRecordReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/userRecordActions.js">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/userRecordReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+            <state relative-caret-position="129">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -104,22 +116,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Login.js">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
-              <folding>
-                <element signature="e#201#247#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="103">
+              <caret line="46" column="40" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RecordList.js">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/RecordList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+            <state relative-caret-position="240">
+              <caret line="89" column="76" selection-start-line="89" selection-start-column="76" selection-end-line="89" selection-end-column="76" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#128#237#0" expanded="true" />
@@ -129,38 +138,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConfirmModal.js">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/store/actions/userRecordActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#128#237#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -177,6 +158,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>temp2</find>
+      <find>quizApp</find>
+      <find>question</find>
+      <find>data.re</find>
+      <find>typ</find>
+      <find>find</find>
+      <find>key</find>
     </findStrings>
     <replaceStrings>
       <replace>resetTemp</replace>
@@ -197,13 +184,26 @@
         <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/Score.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/store/actions/userRecordActions.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/userRecordReducer.js" />
         <option value="$PROJECT_DIR$/src/Login.js" />
         <option value="$PROJECT_DIR$/src/RecordList.js" />
         <option value="$PROJECT_DIR$/src/ConfirmModal.js" />
         <option value="$PROJECT_DIR$/src/Main.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/nodeJSApp/index.js" />
+        <option value="$PROJECT_DIR$/src/nodeJSApp/index.htm" />
+        <option value="$PROJECT_DIR$/src/quizApp/Choice.js" />
+        <option value="$PROJECT_DIR$/src/checkListApp/App.js" />
+        <option value="$PROJECT_DIR$/src/nodeJSApp/App.js" />
+        <option value="$PROJECT_DIR$/src/nodeJSApp/users.json" />
+        <option value="$PROJECT_DIR$/src/nodeJSApp/server.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/store/actions/userRecordActions.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/ConfirmModal.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/RecordList.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/store/reducers/userRecordReducer.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/Main.js" />
+        <option value="$PROJECT_DIR$/src/quizApp/Login.js" />
       </list>
     </option>
   </component>
@@ -226,8 +226,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
-    <option name="width" value="1289" />
-    <option name="height" value="728" />
+    <option name="width" value="1151" />
+    <option name="height" value="660" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -250,12 +250,26 @@
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nodeJSApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="quizApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="quizApp" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="quizApp" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -263,6 +277,7 @@
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="quizApp" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -279,13 +294,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/nodeJSApp" />
+      <recent name="$PROJECT_DIR$/src/quizApp" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/store/actions" />
       <recent name="$PROJECT_DIR$/src/store/reducers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/checkListApp" />
+      <recent name="$PROJECT_DIR$/src/quizApp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -315,7 +336,12 @@
       <workItem from="1536567944103" duration="17747000" />
       <workItem from="1536650873450" duration="14883000" />
       <workItem from="1536666735745" duration="19632000" />
-      <workItem from="1536743552901" duration="12753000" />
+      <workItem from="1536743552901" duration="15251000" />
+      <workItem from="1536761136949" duration="27128000" />
+      <workItem from="1537262002126" duration="1124000" />
+      <workItem from="1537266569910" duration="599000" />
+      <workItem from="1537293343451" duration="1417000" />
+      <workItem from="1537345581462" duration="5701000" />
     </task>
     <task id="LOCAL-00001" summary="Score and Record modified with redux">
       <created>1536566229469</created>
@@ -345,11 +371,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536681776659</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="all is OK admin handles deleteuser resetUsers at recordList">
+      <created>1536757132781</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1536757132781</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81473000" />
+    <option name="totallyTimeSpent" value="119940000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,9 +399,9 @@
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50851583" side_tool="true" weight="0.25" />
       <window_info id="npm" order="1" sideWeight="0.5109489" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4890511" visible="true" weight="0.30721003" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4890511" visible="true" weight="0.30715936" />
       <window_info id="Structure" order="3" sideWeight="0.50851583" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4992163" visible="true" weight="0.32952693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4992163" visible="true" weight="0.2610063" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007837" side_tool="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3284553" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -421,13 +454,14 @@
     <MESSAGE value="user Login Page added" />
     <MESSAGE value="record list added seperated" />
     <MESSAGE value="login added seperated log out added ?name used" />
-    <option name="LAST_COMMIT_MESSAGE" value="login added seperated log out added ?name used" />
+    <MESSAGE value="all is OK admin handles deleteuser resetUsers at recordList" />
+    <option name="LAST_COMMIT_MESSAGE" value="all is OK admin handles deleteuser resetUsers at recordList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RecordList.js</url>
+          <url>file://$PROJECT_DIR$/src/quizApp/RecordList.js</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -441,65 +475,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Question.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Choice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/scoreReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/reducers/scoreReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="36" selection-start-column="31" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/recordReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/reducers/recordReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChoiceList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="96" lean-forward="true" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
+    <entry file="file://$PROJECT_DIR$/src/checkListApp/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/scoreActions.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/actions/scoreActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="37" selection-end-column="37" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/node_modules/react-router/es/Route.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -508,85 +506,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/recordActions.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/actions/recordActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Score.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkListApp/App.test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nodeJSApp/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
+        <state relative-caret-position="135">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
           <caret line="10" column="59" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkListApp/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Choice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/ChoiceList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="89" lean-forward="true" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConfirmModal.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/ConfirmModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#128#237#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.js">
+    <entry file="file://$PROJECT_DIR$/src/nodeJSApp/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nodeJSApp/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkListApp/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.js">
+    <entry file="file://$PROJECT_DIR$/src/nodeJSApp/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
-          <folding>
-            <element signature="e#201#247#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="25" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RecordList.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/actions/userRecordActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/RecordList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="89" column="76" selection-start-line="89" selection-start-column="76" selection-end-line="89" selection-end-column="76" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#128#237#0" expanded="true" />
@@ -594,17 +645,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/userRecordReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/store/reducers/userRecordReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/userRecordActions.js">
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="103">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

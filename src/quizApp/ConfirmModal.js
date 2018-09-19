@@ -41,7 +41,7 @@ export  default class ConfirmModal extends Component {
                     </Modal.Header>
 
                     <Modal.Body>{this.props.type.type=="deleteUser"?
-                        "The user ".concat(this.props.type.d_key):
+                        "The user ".concat(this.props.type.deleteUserName):
                         "All users"} will be deleted</Modal.Body>
                     <Modal.Footer>
                         <Button onClick={() => this.props.confirmAction(false)}>Cancel</Button>

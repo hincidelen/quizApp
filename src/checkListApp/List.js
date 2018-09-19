@@ -7,9 +7,10 @@ export default class App extends Component {
             {
                 this.props.items.map((item, index) => {
                     return <li key={index}>
-                        {item}
-                        <button onClick={() => this.props.handleDelete(index)}>Erase</button>
-                        </li>
+                        <button onClick={() => this.props.handleDelete(index)}>
+                        {item.item}
+                        </button>
+                    </li>
                 })
             }
         </ul>

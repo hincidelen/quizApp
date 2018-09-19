@@ -11,15 +11,18 @@ const userRecordReducer = (state = {list:[]}, action) => {
         updateTemp[action.key].record=action.record;
         console.log(updateTemp);
       return {list:updateTemp };
-    case "resetUsers":
+      case "resetUsers":
           let resetTemp=state.list;
-          if(action.key==0)
+        console.log(action.key)
+          if(action.key.isadmin==true)
                 var silinen = resetTemp.splice(1, resetTemp.length-1);
-      return {list:resetTemp};
+      return {list:[...[],action.key]};
     case "deleteUser":
           let deleteTemp=state.list;
-        if(action.key==0){
-            let index=_.find(deleteTemp, { 'key': action.deleteKey})||{};
+        let actioner=_.find(deleteTemp, { 'userName': action.deleteUserName})||{};
+
+        if(action.key.isadmin==true&&action.key.userName!=action.deleteUserName){
+            let index=_.find(deleteTemp, { 'userName': action.deleteUserName})||{};
             var deleteKey = deleteTemp.indexOf(index);
             console.log(action.deleteKey, action.key, index, deleteKey, deleteTemp);
             var silinen = deleteTemp.splice(deleteKey, 1);

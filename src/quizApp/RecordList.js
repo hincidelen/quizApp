@@ -42,10 +42,10 @@ class RecordList extends Component {
     }
     componentDidMount() {
     }
-    deleteUser(userKey, d_key){
+    deleteUser(userKey, deleteUserName){
         this.setState({
             confirmModal:true,
-            confirmed:{type:"deleteUser", userKey:userKey, d_key:d_key},
+            confirmed:{type:"deleteUser", userKey:userKey, deleteUserName:deleteUserName},
         })
     }
      resetUsers(userKey){
@@ -59,7 +59,7 @@ class RecordList extends Component {
             if(this.state.confirmed.type=="resetUsers")
                 this.props.resetUsers({key:this.state.confirmed.userKey})
             else if(this.state.confirmed.type=="deleteUser")
-                this.props.deleteUser({key:this.state.confirmed.userKey, deleteKey:this.state.confirmed.d_key})
+                this.props.deleteUser({key:this.state.confirmed.userKey, deleteKey:this.state.confirmed.deleteUserName})
         }
         this.setState({
             confirmed:{},
@@ -72,9 +72,10 @@ class RecordList extends Component {
         var size = 10;
         var ordered = (_.orderBy(list, ['record', 'key'], ['desc', 'asc']));
         let name = (this.props.location.search).slice(1);
-        let link =  "/main?".concat(name);
         let index=_.find(this.props.users.list, { 'userName': name})||{};
-        let userKey=index.key;
+        let userKey=this.props.users.list.indexOf(index)
+        let isAdmin=index.isadmin;
+        let link =  "/quizapp/main?name=".concat(name).concat("&isadmin=").concat(isAdmin);
         return (
             <div style={{ height: 10, justifyContent: 'center'}}>
                 <ConfirmModal type={this.state.confirmed} confirmAction={this.confirm.bind(this)} confirmState={this.state.confirmModal}  />
@@ -84,12 +85,12 @@ class RecordList extends Component {
                     {ordered.slice(0,size).map((d, idx) => {
                         return (
                             <ul  key={idx}>
-                                <Button bsStyle="default">{d.record} - {d.userName} -{d.key} -</Button>
+                                <Button bsStyle="default">{d.userName} - {d.record}</Button>
                                 <Button bsStyle="secondary"
-                                        onClick={() => this.deleteUser(userKey,d.key)} disabled={userKey || !d.key}>delete</Button>
+                                        onClick={() => this.deleteUser(index, d.userName)} disabled={!isAdmin}>delete</Button>
                             </ul>)
                     })}
-                    <Button bsStyle="danger" onClick={() => this.resetUsers(userKey)} disabled={userKey}>ResetUsers</Button>
+                    <Button bsStyle="danger" onClick={() => this.resetUsers(index)} disabled={!isAdmin}>ResetUsers</Button>
                 </center>
             </div>
         );
@@ -105,3 +106,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(RecordList);
+
