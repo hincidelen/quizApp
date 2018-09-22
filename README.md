@@ -10,4 +10,4 @@ react-router-dom,
 lodash
 
 To Run:
-node start
+npm start
