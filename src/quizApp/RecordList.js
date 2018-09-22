@@ -79,7 +79,8 @@ class RecordList extends Component {
         return (
             <div style={{ height: 10, justifyContent: 'center'}}>
                 <ConfirmModal type={this.state.confirmed} confirmAction={this.confirm.bind(this)} confirmState={this.state.confirmModal}  />
-                <Button > <Link to={link}><h5>back</h5></Link></Button>
+                <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push(link)}>Back</Button>
+
                 <center>
                     <h2>Record List </h2>
                     {ordered.slice(0,size).map((d, idx) => {

@@ -5,6 +5,8 @@ import ChoiceList from "./ChoiceList";
 import Score from "./Score";
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
 
 import { connect } from 'react-redux';
 import * as recordActions from './store/actions/recordActions';
@@ -142,24 +144,29 @@ class Main extends Component {
         let results=data.results;
         let link = 'recordList?'.concat(this.state.userName)
         return (
-            <div style={{ height: 10 }}>
+            <div style={{height: 10}}>
 
                 <p>{this.state.userName} : {this.state.key}</p>
                 <Modal.Header style={{justifyContent: 'space-evenly'}}>
 
-                        <Score userKey={this.state.key} point={this.state.score} next={this.fetchData.bind(this)}/>
-                    </Modal.Header>
+                    <Score userKey={this.state.key} point={this.state.score} next={this.fetchData.bind(this)}/>
+                </Modal.Header>
                 <Modal.Body style={{justifyContent: 'space-evenly'}}>
-                        <Question  type= {results[this.state.questionNo].type } question= {results[this.state.questionNo].question }/>
-                        <ChoiceList  isClicked={this.state.isClicked} choices={this.state.choices}
-                                     chooseAnswer={this.chooseAnswer.bind(this)} answer= {results[this.state.questionNo].correct_answer } />
-                    </Modal.Body>
-                <Modal.Footer  style={{justifyContent: 'center'}}>
-                        <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
-                        <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
+                    <Question type={results[this.state.questionNo].type}
+                              question={results[this.state.questionNo].question}/>
+                    <ChoiceList isClicked={this.state.isClicked} choices={this.state.choices}
+                                chooseAnswer={this.chooseAnswer.bind(this)}
+                                answer={results[this.state.questionNo].correct_answer}/>
+                </Modal.Body>
+                <Modal.Footer style={{justifyContent: 'center'}}>
+                    <Button bsStyle="secondary" onClick={() => this.reset()}>Reset</Button>
+                    <Button bsStyle="secondary" onClick={() => this.fetchData()}>Next</Button>
                 </Modal.Footer>
-                <Link to= {link}><h5>Record List</h5></Link>
-                <Link to= "/quizApp"><h5>Log out</h5></Link>
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push(link)}>Record List</Button>
+                    <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push('/quizApp')}>Log out</Button>
+                    <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push('/')}>Quit</Button>
+                </div>
             </div>
         );
     }

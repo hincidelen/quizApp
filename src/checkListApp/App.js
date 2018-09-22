@@ -3,6 +3,8 @@ import './App.css';
 import List from './List';
 
 import _ from 'lodash';
+import Button from "react-bootstrap/lib/Button";
+import {Link} from "react-router-dom";
 
 export default class App extends Component {
     constructor(props) {
@@ -94,6 +96,7 @@ export default class App extends Component {
 
         return (
             <div>
+                <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push('/')}>Quit</Button>
                 <form className="App" onSubmit={this.onSubmit}>
                     <input value={this.state.term.item} onChange={this.onChange} />
                     <button>Submit</button>

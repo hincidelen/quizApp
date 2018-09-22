@@ -37,7 +37,7 @@ class Login extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         //this.props.setName(this.state.name);
-        this.props.history.push('quizApp/main?name='+this.state.name+'&isadmin='+this.state.admin);
+        this.props.history.push('/quizApp/main?name='+this.state.name+'&isadmin='+this.state.admin);
     }
     render() {
         return (//show={this.props.userName==""?true:false}
