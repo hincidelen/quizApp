@@ -5,19 +5,10 @@ import ChoiceList from "./ChoiceList";
 import Score from "./Score";
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
 
 import { connect } from 'react-redux';
 import * as recordActions from './store/actions/recordActions';
 import * as userRecordActions from './store/actions/userRecordActions';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect
-} from 'react-router-dom'
 import _ from 'lodash';
 
 class Main extends Component {
