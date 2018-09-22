@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c26e09b-8932-4880-8b9b-43e9f7a23025" name="Default Changelist" comment="isadmin added to user and login">
-      <change afterPath="$PROJECT_DIR$/src/Menu.js" afterDir="false" />
+    <list default="true" id="7c26e09b-8932-4880-8b9b-43e9f7a23025" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkListApp/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkListApp/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizApp/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizApp/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizApp/RecordList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizApp/RecordList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,31 +33,34 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="htm" value="4" />
-          <entry key="js" value="10003" />
+          <entry key="js" value="10005" />
           <entry key="json" value="35" />
-          <entry key="txt" value="272" />
+          <entry key="md" value="60" />
+          <entry key="txt" value="293" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="4" />
           <entry key="JSON" value="35" />
-          <entry key="JavaScript" value="10003" />
-          <entry key="PLAIN_TEXT" value="272" />
+          <entry key="JavaScript" value="10005" />
+          <entry key="PLAIN_TEXT" value="353" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="js" value="140" />
+          <entry key="js" value="141" />
           <entry key="json" value="12" />
+          <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
           <entry key="JSON" value="12" />
-          <entry key="JavaScript" value="140" />
+          <entry key="JavaScript" value="141" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -75,11 +73,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quizApp/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="167" selection-start-line="167" selection-end-line="168" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="84">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/quizApp/Score.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="10" column="59" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -108,12 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quizApp/RecordList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#128#237#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-448">
+              <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -126,11 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-              <folding>
-                <element signature="e#173#209#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -145,27 +142,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nodeJSApp/App.js">
+        <entry file="file://$PROJECT_DIR$/src/checkListApp/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="252">
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nodeJSApp/mongoDB.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/checkListApp/App.js">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="98" column="109" selection-start-line="98" selection-start-column="109" selection-end-line="98" selection-end-column="109" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -227,9 +219,10 @@
         <option value="$PROJECT_DIR$/src/nodeJSApp/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Menu.js" />
+        <option value="$PROJECT_DIR$/src/checkListApp/App.js" />
         <option value="$PROJECT_DIR$/src/quizApp/Main.js" />
         <option value="$PROJECT_DIR$/src/quizApp/RecordList.js" />
-        <option value="$PROJECT_DIR$/src/checkListApp/App.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -272,12 +265,6 @@
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="checkListApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
@@ -352,7 +339,7 @@
       <workItem from="1537442709193" duration="5289000" />
       <workItem from="1537516519821" duration="3192000" />
       <workItem from="1537553387911" duration="649000" />
-      <workItem from="1537627593630" duration="4710000" />
+      <workItem from="1537627593630" duration="5667000" />
     </task>
     <task id="LOCAL-00001" summary="Score and Record modified with redux">
       <created>1536566229469</created>
@@ -396,11 +383,25 @@
       <option name="project" value="LOCAL" />
       <updated>1537351502454</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Menu page added">
+      <created>1537633077865</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537633077874</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ReadMe">
+      <created>1537633954109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537633954109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141952000" />
+    <option name="totallyTimeSpent" value="142909000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -417,7 +418,7 @@
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.51536316" weight="0.49707174" />
       <window_info id="npm" order="1" sideWeight="0.51536316" weight="0.14870182" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.48463687" visible="true" weight="0.1568779" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.48463687" visible="true" weight="0.1568779" />
       <window_info id="Structure" order="3" sideWeight="0.51536316" weight="0.48462665" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49545455" weight="0.43719414" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50454545" side_tool="true" weight="0.53894573" />
@@ -477,7 +478,9 @@
     <MESSAGE value="login added seperated log out added ?name used" />
     <MESSAGE value="all is OK admin handles deleteuser resetUsers at recordList" />
     <MESSAGE value="isadmin added to user and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="isadmin added to user and login" />
+    <MESSAGE value="Menu page added" />
+    <MESSAGE value="ReadMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadMe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,17 +497,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/quizApp/RecordList.js</url>
-          <line>63</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/quizApp/RecordList.js</url>
-          <line>62</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/quizApp/RecordList.js</url>
-          <line>43</line>
+          <line>42</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -571,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quizApp/Score.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -673,41 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding>
-            <element signature="e#173#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quizApp/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="167" selection-start-line="167" selection-end-line="168" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quizApp/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
           <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quizApp/RecordList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#128#237#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,11 +681,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/checkListApp/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="98" column="109" selection-start-line="98" selection-start-column="109" selection-end-line="98" selection-end-column="109" />
+        <state relative-caret-position="252">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/Score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizApp/RecordList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
