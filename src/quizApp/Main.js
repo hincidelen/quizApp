@@ -85,7 +85,7 @@ class Main extends Component {
             /*this.setState({
                 record:this.state.score+1
             })*/
-            this.props.updateUserRecord({key:this.state.key,record:this.state.score+1});
+            this.props.updateUserRecord({key:this.state.userName,record:this.state.score+1});
         }
         this.setState({
             score:this.state.score+1

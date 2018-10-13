@@ -8,8 +8,9 @@ const userRecordReducer = (state = {list:[]}, action) => {
         return {list:[...state.list, user]};
     case "updateUserRecord":
         let updateTemp=state.list;
-        updateTemp[action.key].record=action.record;
-        console.log(updateTemp);
+        let user=_.find(updateTemp, { 'userName': action.key})||{};
+        console.log(user)
+        user.record=action.record;
       return {list:updateTemp };
       case "resetUsers":
           let resetTemp=state.list;

@@ -35,7 +35,7 @@ export default class Choice extends Component {
             {
 
                 sh.map((item, index) => {
-                    return  <li type="A"><Button  bsStyle={this.props.isClicked?
+                    return  <li type="A" key={index}><Button  bsStyle={this.props.isClicked?
                         (item==this.props.correct? this.state.appearances.true :
                             (this.state.ind==index?this.state.appearances.false:this.state.appearances.default)):
                         this.state.appearances.default}  key={index} onClick={() => this.evaluate(index,item)}  >

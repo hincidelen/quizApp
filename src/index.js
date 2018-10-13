@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import CheckListApp from './checkListApp/App';
+import IddiaApp from './iddia/Results';
 //import NodeJSApp from './nodeJSApp/App';
 import Login from './quizApp/Login';
 import Main from './quizApp/Main';
@@ -23,6 +24,7 @@ ReactDOM.render(
                     <Route path="/quizApp/main" component={Main} />
                     <Route path="/quizApp/recordList" component={RecordList}/>
                 <Route path="/checkListApp" component={CheckListApp}/>
+                <Route path="/iddia" component={IddiaApp}/>
             </div>
         </BrowserRouter>
     </Provider>,

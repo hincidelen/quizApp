@@ -34,6 +34,9 @@ class Menu extends Component {
                         <li>
                             <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push('/checkListApp')}>checkList App</Button>
                         </li>
+                        <li>
+                            <Button bsStyle="btn btn-outline-secondary" onClick={() => this.props.history.push('/iddia')}>iddia App</Button>
+                        </li>
                     </center>
                 </Modal.Body>
                 <Modal.Footer  style={{justifyContent: 'center'}}>
